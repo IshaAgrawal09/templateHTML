@@ -1,0 +1,111 @@
+/* BACKGROUND COLOR  */
+.bg--ebony-clay {
+  background-color: #252b42;
+}
+
+.bg--picton-blue {
+  background-color: #23a6f0;
+}
+
+.plr-50 {
+  padding: 0 50px;
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
+}
+/* HEADER  */
+header {
+  /* background-image: linear-gradient(
+      89.85deg,
+      #000000 0.13%,
+      #000000 0.14%,
+      rgba(0, 0, 0, 0) 99.56%
+    ),
+    url("/Images/background.jpg"); */
+
+  background-image: url("/Images/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* NAVBAR  */
+
+.navbar__listing {
+  text-align: center;
+}
+.navbar__btn {
+  border: none;
+}
+
+.navbar__btn:focus {
+  box-shadow: none;
+}
+
+/* HERO SECTION  */
+.hero-section {
+  text-align: center;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.hero-section__btn button,
+.example__content button {
+  border: none;
+  border-radius: 37px;
+  font-size: 14px !important;
+}
+
+.hero-section__btn-outline {
+  background-color: transparent;
+  border: 1px solid #ffffff !important;
+}
+
+/* ADVANTAGE SECTION  */
+.advantage__listing li {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* TESTIMONY SECTION  */
+.testimony {
+  background-color: #8ec2f2;
+}
+
+.testimony__title,
+.examples__title {
+  text-align: center;
+}
+
+.testimony__listing li {
+  background-color: #ffffff;
+}
+
+/* EXAMPLES  */
+.examples__listing li {
+  position: relative;
+}
+
+.examples__listing li img {
+  /* width: 100%; */
+  max-width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 14.58%,
+    rgba(56, 56, 56, 0.84) 100%
+  );
+}
+
+.example__content {
+  /* text-align: left; */
+  position: absolute;
+  left: 10px;
+  right: 10px;
+
+  bottom: 0;
+}
+
+.example__content h3 {
+  font-size: 23px;
+}
