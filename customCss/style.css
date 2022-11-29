@@ -7,35 +7,63 @@
   background-color: #23a6f0;
 }
 
-.plr-50 {
-  padding: 0 50px;
+.bg--jungle-green::before {
+  background-color: #2dc071 !important;
+}
+
+.bg--silver::before {
+  background-color: #bdbdbd !important;
+}
+
+/* COLORS  */
+.c--ebony-clay {
+  color: #252b42;
+}
+
+.c--picton-blue {
+  color: #23a6f0;
 }
 
 ul {
   margin: 0;
+  padding: 0;
   list-style-type: none;
 }
-/* HEADER  */
-header {
-  /* background-image: linear-gradient(
-      89.85deg,
-      #000000 0.13%,
-      #000000 0.14%,
-      rgba(0, 0, 0, 0) 99.56%
-    ),
-    url("/Images/background.jpg"); */
 
-  background-image: url("/Images/background.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.btn--picton-blue {
+  background-color: #23a6f0;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 8px 20px;
+  border: none;
 }
+
 /* NAVBAR  */
-
-.navbar__listing {
-  text-align: center;
+header nav {
+  background-color: #252b42;
 }
+
+@media only screen and (min-width: 768px) {
+  header nav {
+    background-color: transparent;
+  }
+}
+
+.navbar__logo a {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.navbar__login-btn {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+}
+
 .navbar__btn {
+  background-color: #252b42;
   border: none;
 }
 
@@ -44,28 +72,47 @@ header {
 }
 
 /* HERO SECTION  */
-.hero-section {
-  text-align: center;
+.banner {
+  margin-top: -70px;
+  background-image: url("/Images/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner__background {
+  min-height: 90vh;
   color: #ffffff;
   background: rgba(0, 0, 0, 0.75);
 }
 
-.hero-section__btn button,
+@media only screen and (min-width: 768px) {
+  .banner__background {
+    background: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(
+      89.85deg,
+      #000000 0.13%,
+      #000000 0.14%,
+      rgba(0, 0, 0, 0) 99.56%
+    );
+  }
+}
+
+.banner__btn button,
 .example__content button {
   border: none;
   border-radius: 37px;
   font-size: 14px !important;
 }
 
-.hero-section__btn-outline {
+.banner__btn--outline {
   background-color: transparent;
   border: 1px solid #ffffff !important;
 }
 
-/* ADVANTAGE SECTION  */
-.advantage__listing li {
-  margin-bottom: 20px;
-  text-align: center;
+/* ADVANTAGE  */
+.advantage__list-item {
+  max-width: 330px;
 }
 
 /* TESTIMONY SECTION  */
@@ -73,23 +120,28 @@ header {
   background-color: #8ec2f2;
 }
 
-.testimony__title,
-.examples__title {
-  text-align: center;
-}
-
-.testimony__listing li {
+.testimony__listing-item {
+  max-width: 420px;
   background-color: #ffffff;
 }
 
+.testimony__listig-item-user {
+  top: 13px;
+  left: -59px;
+}
+
 /* EXAMPLES  */
+.examples__listing {
+  padding: 0 20px;
+  gap: 20px;
+}
 .examples__listing li {
-  position: relative;
+  flex: 0 0 100%;
+  max-width: calc(25% - 20px);
 }
 
 .examples__listing li img {
-  /* width: 100%; */
-  max-width: 100%;
+  width: 100%;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 14.58%,
@@ -97,15 +149,182 @@ header {
   );
 }
 
+@media only screen and (max-width: 768px) {
+  .examples__listing li {
+    max-width: 100%;
+  }
+}
+
 .example__content {
-  /* text-align: left; */
   position: absolute;
   left: 10px;
   right: 10px;
-
   bottom: 0;
 }
 
 .example__content h3 {
   font-size: 23px;
+}
+
+/* PRICING  */
+.pricing__listing-item {
+  max-width: 330px;
+  background-color: #dedede;
+  border-radius: 10px;
+  padding: 50px 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .pricing__listing-item button {
+    order: 1;
+  }
+}
+
+.pricing__organize {
+  color: #737373;
+  font-size: 16px;
+}
+
+.pricing__price {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 57px;
+}
+
+.pricing__listing-item button {
+  width: 100%;
+  margin: 30px 0;
+}
+
+.pricing__listing-benefits li span::before {
+  content: "\2713";
+  position: absolute;
+  left: -18px;
+  top: 0;
+  padding: 0.3px 1.5px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.pricing__listing-item-new {
+  top: -20px;
+  right: 5px;
+  background-color: #e77c40;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+/* CONTACT SECTION  */
+.contact {
+  background-image: url("../Images/contact.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contact__background {
+  background: linear-gradient(
+    89.83deg,
+    #ffffff 14.24%,
+    #ffffff 14.25%,
+    rgba(255, 255, 255, 0) 99.55%
+  );
+}
+
+.contact__form {
+  max-width: 500px;
+  padding: 90px 0;
+}
+
+.contact__form form {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.contact__form form div {
+  margin: 10px 0;
+}
+
+.contact__form form input,
+.contact__form form select {
+  width: 100%;
+  background-color: #e6e6e6;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.contact__form form textarea {
+  width: 100%;
+  background: #f9f9f9;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+}
+
+/* SUBSCRIBE SECTION  */
+.subscribe {
+  background-color: #fafafa;
+}
+
+.subscribe__content-btn {
+  width: 163px;
+}
+
+.subscribe__content-btn button {
+  width: 100%;
+}
+
+/* FOOTER SECTION  */
+.footer__content-info ul li {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  margin: 5px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer__content-info {
+    flex: 0 0 100%;
+  }
+}
+
+.footer__copyright {
+  background-color: #ffffff;
+}
+
+.footer__copyright-info {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+
+.footer__copyright-icons {
+  margin: 0 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer__copyright {
+    background-color: #252b42;
+  }
+
+  .footer__copyright-info {
+    color: #ffffff;
+  }
+
+  .footer__copyright-icons-fb svg path {
+    fill: #335bf5;
+  }
+
+  .footer__copyright-icons-insta svg path {
+    fill: #e61f5a;
+  }
 }
